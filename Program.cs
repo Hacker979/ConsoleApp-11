@@ -7,21 +7,29 @@ using System.Threading.Tasks;
 namespace ConsoleApp_11
 {
     /// <summary>
-    /// Задача 1. Определить статический метод int Meters (int k, int m),
-    /// который принимает два целых аргумента (километры k, метры m) и возвращает количество метров.
-    /// Используя этот метод, вычислить количество метров для расстояния:
+    /// Задача 2. Определить статический метод int Seconds (int h, int m, int s),
+    /// который принимает три целых аргумента (часы h, минуты m и секунды s) и возвращает количество секунд, прошедших с начала дня.
+    /// Используя этот метод, вычислить количество секунд, прошедших с начала дня при:
     /// </summary>
     /// <param name="args"></param>
     class Program
     {
-        static void Meters(int k, int m)
+        static int Second(int h, int m, int s)
         {
-            Console.WriteLine($"{k*1000+m} метров");
+            return h*3600 + m*60 + s;
+        }
+        static int input(string a)
+        {
+            Console.Write(a);
+            return int.Parse(Console.ReadLine());
         }
         
         static void Main(string[] args)
         {
-            Meters(int.Parse( Console.ReadLine()), int.Parse(Console.ReadLine()));
+            int h = input("Введите часы: ");
+            int m = input("Введите минуты: ");
+            int s = input("Введите сеунды: ");
+            Console.WriteLine($"{Second(h,m,s)} секунд");
             Console.Read();
         }
     }
