@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,14 +14,18 @@ namespace ConsoleApp_11
     /// <param name="args"></param>
     class Program
     {
-        static void Meters(int k, int m)
+        static int Meters(int k, int m)
         {
-            Console.WriteLine($"{k*1000+m} метров");
+            return k * 1000 + m;
         }
         
         static void Main(string[] args)
         {
-            Meters(int.Parse( Console.ReadLine()), int.Parse(Console.ReadLine()));
+            Console.Write("Введите километры:");
+            int k = int.Parse(Console.ReadLine());
+            Console.Write("Введите метры:");
+            int m = int.Parse(Console.ReadLine());
+            Console.WriteLine(Meters(k,m));
             Console.Read();
         }
     }
