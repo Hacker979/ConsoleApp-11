@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,25 +7,26 @@ using System.Threading.Tasks;
 namespace ConsoleApp_11
 {
     /// <summary>
-    /// Задача 1. Определить статический метод int Meters (int k, int m),
-    /// который принимает два целых аргумента (километры k, метры m) и возвращает количество метров.
-    /// Используя этот метод, вычислить количество метров для расстояния:
-    /// </summary>
+    /// Задача 3. Найти максимальное из трех целых чисел, используя вспомогательные методы.    /// </summary>
     /// <param name="args"></param>
     class Program
     {
-        static int Meters(int k, int m)
+        static int max(int a, int b, int c)
         {
-            return k * 1000 + m;
+            return a>b?a:b<c?c:b ;
+        }
+        static int input(string a)
+        {
+            Console.Write(a);
+            return int.Parse(Console.ReadLine());
         }
         
         static void Main(string[] args)
         {
-            Console.Write("Введите километры:");
-            int k = int.Parse(Console.ReadLine());
-            Console.Write("Введите метры:");
-            int m = int.Parse(Console.ReadLine());
-            Console.WriteLine(Meters(k,m));
+            int a = input("Введите a: ");
+            int b = input("Введите b: ");
+            int c = input("Введите c: ");
+            Console.WriteLine($"ответ:{max(a,b,c)}");
             Console.Read();
         }
     }
