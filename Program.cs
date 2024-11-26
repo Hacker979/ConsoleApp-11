@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace ConsoleApp_11
 {
     /// <summary>
-    /// Задача 3. Найти максимальное из трех целых чисел, используя вспомогательные методы.    /// </summary>
+    /// Задача 3. Найти максимальное из трех целых чисел, используя вспомогательные методы.
     /// <param name="args"></param>
     class Program
     {
