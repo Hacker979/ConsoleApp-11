@@ -13,7 +13,7 @@ namespace ConsoleApp_11
     {
         static double n6()
         {
-            return (((Math.Sqrt(2) + 2) / (Math.Sqrt(7) + 7)) + ((Math.Sqrt(5) + 5) / (Math.Sqrt(13) + 13)) + ((Math.Sqrt(11) + 11) / (Math.Sqrt(8) + 8)));
+            return (((Math.Sqrt(8) + 15) / (Math.Sqrt(15) + 8)) + ((Math.Sqrt(12) + 6) / (Math.Sqrt(6) + 12)) + ((Math.Sqrt(21) + 7) / (Math.Sqrt(7) + 21)));
         }
         static int input(string a)
         {
@@ -23,7 +23,7 @@ namespace ConsoleApp_11
         
         static void Main(string[] args)
         {
-            Console.WriteLine($"ответ: {n6()}");
+            Console.WriteLine($"x = {n6()}");
             Console.Read();
         }
     }
