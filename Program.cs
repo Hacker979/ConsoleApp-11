@@ -14,18 +14,22 @@ namespace ConsoleApp_11
     /// <param name="args"></param>
     class Program
     {
-        static int Meters(int k, int m)
+        static int Max(int k, int m)
         {
-            return k * 1000 + m;
+            return k>m?k:m;
         }
         
         static void Main(string[] args)
         {
-            Console.Write("Введите километры:");
+            Console.Write("a = ");
             int k = int.Parse(Console.ReadLine());
-            Console.Write("Введите метры:");
+            Console.Write("b = ");
             int m = int.Parse(Console.ReadLine());
-            Console.WriteLine(Meters(k,m));
+            Console.Write("c = ");
+            int c = int.Parse(Console.ReadLine());
+            Console.Write("d = ");
+            int d = int.Parse(Console.ReadLine());
+            Console.WriteLine($"s = {Max(k,m)+Max(c,d)}");
             Console.Read();
         }
     }
