@@ -11,10 +11,16 @@ namespace ConsoleApp_11
     /// <param name="args"></param>
     class Program
     {
-        static int max(int a, int b, int c)
+        static int Max2(int x, int y)
         {
-            return a>b?a:b<c?c:b ;
+            return x > y ? x : y;
         }
+
+        static int Max3(int a, int b, int c)
+        {
+            return Max2(Max2(a, b), c);
+        }
+
         static int input(string a)
         {
             Console.Write(a);
@@ -26,7 +32,7 @@ namespace ConsoleApp_11
             int a = input("Введите a: ");
             int b = input("Введите b: ");
             int c = input("Введите c: ");
-            Console.WriteLine($"ответ:{max(a,b,c)}");
+            Console.WriteLine($"ответ:{Max3(a,b,c)}");
             Console.Read();
         }
     }
