@@ -7,14 +7,21 @@ using System.Threading.Tasks;
 namespace ConsoleApp_11
 {
     /// <summary>
-    /// Задача 3. Найти максимальное из трех целых чисел, используя вспомогательные методы.
+    /// Задача 3. Найти минимальное из трех целых чисел, используя вспомогательные методы.
+    /// <summary>
     /// <param name="args"></param>
     class Program
     {
-        static int max(int a, int b, int c)
+        static int Min2(int x, int y)
         {
-            return a>b?a:b<c?c:b ;
+            return x < y ? x : y;
         }
+
+        static int Min3(int a, int b, int c)
+        {
+            return Min2(Min2(a, b), c);
+        }
+
         static int input(string a)
         {
             Console.Write(a);
@@ -26,7 +33,7 @@ namespace ConsoleApp_11
             int a = input("Введите a: ");
             int b = input("Введите b: ");
             int c = input("Введите c: ");
-            Console.WriteLine($"ответ:{max(a,b,c)}");
+            Console.WriteLine($"ответ:{Min3(a,b,c)}");
             Console.Read();
         }
     }
